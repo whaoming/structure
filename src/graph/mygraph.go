@@ -6,7 +6,7 @@ const MAXV  = 50
 
 type VertexType struct {
 	no int
-	data ElemType
+	data string
 }
 
 /**
@@ -21,15 +21,15 @@ type MGraph struct {
 type ArcNode struct {
 	adjvex int
 	info ElemType
-	nextarc ArcNode
+	nextarc *ArcNode
 }
 
 type VNode struct {
 	data VertexType
-	firstarc ArcNode
+	firstarc *ArcNode
 }
 
 type ALGraph struct {
-	adjlist []VNode
+	adjlist [MAXV]VNode
 	n,e int
 }

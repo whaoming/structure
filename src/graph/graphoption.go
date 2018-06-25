@@ -1,7 +1,10 @@
 package graph
 
+var thisData = []string{"a","b","c","d","e","f"}
+
 func CreateMGraph() (*MGraph) {
 	var mGrgph *MGraph
+	mGrgph = &MGraph{}
 	i := 0
 	for {
 		if i > 5 {
@@ -9,7 +12,7 @@ func CreateMGraph() (*MGraph) {
 		}
 		var vex VertexType
 		vex.no = i
-		vex.data = 1
+		vex.data = thisData[i]
 		mGrgph.vexs[i] = vex
 		i++
 	}
@@ -24,33 +27,31 @@ func CreateMGraph() (*MGraph) {
 	return mGrgph
 }
 
-
-
 /**
  * 邻接矩阵转化为临接表
  */
-func MatToList(mGraph MGraph, alGraph *ALGraph){
+func MatToList(mGraph *MGraph, alGraph *ALGraph) {
 	i := 0
 	j := 0
 	for {
-		if i>mGraph.n-1 {
+		if i > mGraph.n-1 {
 			break
 		}
 		j = 0
 		vex := mGraph.vexs[i]
-		var vex2 VertexType	//节点信息
-		var vnode VNode		//一个节点
+		var vex2 VertexType //节点信息
+		var vnode VNode     //一个节点
 		vex2.no = i
 		vex2.data = vex.data
 		vnode.data = vex
 
-		for{
-			if j>mGraph.n-1 {
+		for {
+			if j > mGraph.n-1 {
 				break
 			}
 
-			if mGraph.edges[i][j] !=0 {
-				var arcnode ArcNode
+			if mGraph.edges[i][j] != 0 {
+				var arcnode = &ArcNode{}
 				arcnode.adjvex = j
 				arcnode.info = 1
 				arcnode.nextarc = vnode.firstarc
@@ -65,17 +66,17 @@ func MatToList(mGraph MGraph, alGraph *ALGraph){
 	}
 }
 
-func CreateALGraph() (*ALGraph){
+func CreateALGraph() (*ALGraph) {
 	var alGraph *ALGraph
 	i := 0
 	for {
 		if i > 5 {
 			break
 		}
-		var vex VertexType	//节点信息
-		var vnode VNode		//一个节点
+		var vex VertexType //节点信息
+		var vnode VNode    //一个节点
 		vex.no = i
-		vex.data = 1
+		vex.data = "aaa"
 		vnode.data = vex
 
 		switch i {
@@ -93,13 +94,14 @@ var Viste [MAXV]int
 /**
  * 深度优先遍历
  */
-func DFS(alGraph ALGraph, v int) {
-	vNode :=alGraph.adjlist[v]
-	print(vNode.data)
+func DFS(alGraph *ALGraph, v int) {
+	//log.Print("DFS->v:"+strconv.Itoa(v))
+	vNode := alGraph.adjlist[v]
+	print(vNode.data.data)
 	Viste[v] = 1
 	arcNode := vNode.firstarc
-	for{
-		if arcNode.info == 0 {
+	for {
+		if arcNode == nil {
 			break
 		}
 		if Viste[arcNode.adjvex] == 0 {
