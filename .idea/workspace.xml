@@ -4,7 +4,6 @@
     <list default="true" id="b076d1cf-3415-4f3b-85d8-a9707840613d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graph/graphoption.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/graphoption.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graph/mygraph.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/mygraph.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graph/option_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/option_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +32,15 @@
       <file leaf-file-name="graphoption.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/graph/graphoption.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state relative-caret-position="317">
+              <caret line="265" column="27" selection-start-line="265" selection-start-column="27" selection-end-line="265" selection-end-column="27" />
+              <folding>
+                <element signature="e#15#43#0" expanded="true" />
+                <element signature="n#!!block;n#FindPath1#0" />
+                <element signature="n#!!block;n#FindPath2#0" />
+                <element signature="n#!!block;n#FindPath3#0" />
+                <element signature="n#!!block;n#FindPath4#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,8 +48,8 @@
       <file leaf-file-name="mygraph.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graph/mygraph.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="561">
+              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -51,8 +57,8 @@
       <file leaf-file-name="option_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/graph/option_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="311">
+              <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -94,8 +100,8 @@
         <option value="$PROJECT_DIR$/tree/pratice_test.go" />
         <option value="$PROJECT_DIR$/src/tree/treeoption_test.go" />
         <option value="$PROJECT_DIR$/src/tree/treeoption.go" />
-        <option value="$PROJECT_DIR$/src/graph/option_test.go" />
         <option value="$PROJECT_DIR$/src/graph/mygraph.go" />
+        <option value="$PROJECT_DIR$/src/graph/option_test.go" />
         <option value="$PROJECT_DIR$/src/graph/graphoption.go" />
       </list>
     </option>
@@ -110,8 +116,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="345" />
-    <option name="y" value="41" />
+    <option name="x" value="322" />
+    <option name="y" value="247" />
     <option name="width" value="1618" />
     <option name="height" value="969" />
   </component>
@@ -123,6 +129,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,7 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,19 +183,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestDFS in graph">
-    <configuration name="TestAllPath1 in tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="structure" />
-      <working_directory value="$PROJECT_DIR$/src/tree" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="tree" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestAllPath1$" />
-    </configuration>
-    <configuration name="TestDFS in graph" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestShortPath in graph">
+    <configuration name="TestBFS in graph" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="structure" />
       <working_directory value="$PROJECT_DIR$/src/graph" />
       <go_parameters value="-i" />
@@ -198,88 +193,99 @@
       <package value="graph" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestDFS$" />
+      <pattern value="^TestBFS$" />
     </configuration>
-    <configuration name="TestInOrderV2 in tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFindPath2 in graph" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="structure" />
-      <working_directory value="$PROJECT_DIR$/src/tree" />
+      <working_directory value="$PROJECT_DIR$/src/graph" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="tree" />
+      <package value="graph" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestInOrderV2$" />
+      <pattern value="^TestFindPath2$" />
     </configuration>
-    <configuration name="TestLevelOrderV2 in tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFindPath3 in graph" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="structure" />
-      <working_directory value="$PROJECT_DIR$/src/tree" />
+      <working_directory value="$PROJECT_DIR$/src/graph" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="tree" />
+      <package value="graph" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestLevelOrderV2$" />
+      <pattern value="^TestFindPath3$" />
     </configuration>
-    <configuration name="TestPostOrderV2 in tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFindPath4 in graph" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="structure" />
-      <working_directory value="$PROJECT_DIR$/src/tree" />
+      <working_directory value="$PROJECT_DIR$/src/graph" />
       <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="tree" />
+      <package value="graph" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestPostOrderV2$" />
+      <pattern value="^TestFindPath4$" />
+    </configuration>
+    <configuration name="TestShortPath in graph" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="structure" />
+      <working_directory value="$PROJECT_DIR$/src/graph" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="graph" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestShortPath$" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestInOrderV2 in tree" />
-      <item itemvalue="Go Test.TestPostOrderV2 in tree" />
-      <item itemvalue="Go Test.TestAllPath1 in tree" />
-      <item itemvalue="Go Test.TestLevelOrderV2 in tree" />
-      <item itemvalue="Go Test.TestDFS in graph" />
+      <item itemvalue="Go Test.TestBFS in graph" />
+      <item itemvalue="Go Test.TestFindPath2 in graph" />
+      <item itemvalue="Go Test.TestFindPath3 in graph" />
+      <item itemvalue="Go Test.TestFindPath4 in graph" />
+      <item itemvalue="Go Test.TestShortPath in graph" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestDFS in graph" />
-        <item itemvalue="Go Test.TestAllPath1 in tree" />
-        <item itemvalue="Go Test.TestLevelOrderV2 in tree" />
-        <item itemvalue="Go Test.TestPostOrderV2 in tree" />
-        <item itemvalue="Go Test.TestInOrderV2 in tree" />
+        <item itemvalue="Go Test.TestShortPath in graph" />
+        <item itemvalue="Go Test.TestBFS in graph" />
+        <item itemvalue="Go Test.TestFindPath4 in graph" />
+        <item itemvalue="Go Test.TestFindPath3 in graph" />
+        <item itemvalue="Go Test.TestFindPath2 in graph" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 04m 05s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 25m 17s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 06m 11s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 26m 04s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 06m 23s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 27m 16s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 06m 50s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 29m 17s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 06m 53s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 30m 13s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 07m 16s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 30m 37s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 08m 27s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestBFS_in_graph - 2018.07.02 at 20h 37m 03s.xml">
+      <configuration name="TestBFS in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 08m 39s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestShortPath_in_graph - 2018.07.02 at 21h 05m 10s.xml">
+      <configuration name="TestShortPath in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 10m 09s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestShortPath_in_graph - 2018.07.02 at 21h 07m 59s.xml">
+      <configuration name="TestShortPath in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestDFS_in_graph - 2018.06.25 at 21h 10m 12s.xml">
-      <configuration name="TestDFS in graph" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestShortPath_in_graph - 2018.07.02 at 21h 08m 36s.xml">
+      <configuration name="TestShortPath in graph" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -292,20 +298,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="345" y="41" width="1618" height="969" extended-state="0" />
+    <frame x="322" y="247" width="1618" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14276649" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14593908" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32912844" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073636" side_tool="true" weight="0.3286219" />
       <window_info anchor="right" id="Database" order="3" weight="0.3298969" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992636" visible="true" weight="0.33804476" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992636" weight="0.33804476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286219" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39811543" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39811543" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -323,17 +329,67 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="完成图的深度遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成图的深度遍历" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="15" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/graph/graphoption.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" column="28" lean-forward="true" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+          <folding>
+            <element signature="e#15#43#0" expanded="true" />
+            <element signature="n#!!block;n#FindPath1#0" />
+            <element signature="n#!!block;n#FindPath2#0" />
+            <element signature="n#!!block;n#FindPath3#0" />
+            <element signature="n#!!block;n#FindPath4#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/mygraph.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/option_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/graphoption.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/mygraph.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graph/option_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/graphoption.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -385,22 +441,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/option_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="311">
+          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/mygraph.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="561">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graph/graphoption.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state relative-caret-position="317">
+          <caret line="265" column="27" selection-start-line="265" selection-start-column="27" selection-end-line="265" selection-end-column="27" />
+          <folding>
+            <element signature="e#15#43#0" expanded="true" />
+            <element signature="n#!!block;n#FindPath1#0" />
+            <element signature="n#!!block;n#FindPath2#0" />
+            <element signature="n#!!block;n#FindPath3#0" />
+            <element signature="n#!!block;n#FindPath4#0" />
+          </folding>
         </state>
       </provider>
     </entry>
