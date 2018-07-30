@@ -1,6 +1,9 @@
 package graph
 
-import "testing"
+import (
+	"testing"
+	"net/http"
+)
 
 func TestDFS(t *testing.T) {
 	var alGraph = &ALGraph{}
@@ -105,5 +108,23 @@ func TestShortPath(t *testing.T) {
 		tmp++
 	}
 	ShortPath(alGraph,0,5)
+}
+
+func TestHttp(t *testing.T){
+	i := 0
+	for {
+		if i > 100000000 {
+			break
+		}
+		run()
+		i++
+
+	}
+
+}
+
+func run(){
+	http.Get("http://192.168.1.166:8001/v1/home_page_style")
+	//log.Print(rep.Status)
 }
 
