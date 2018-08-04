@@ -78,6 +78,7 @@ func ShellSort(data []int){
 	}
 }
 
+//冒泡排序
 func BubbleSort(data []int){
 	var i,j int
 	i = 0
@@ -99,6 +100,95 @@ func BubbleSort(data []int){
 		}
 		i++
 	}
+}
+
+//快速排序
+func QuickSort(data []int, s,t int){
+	i := s
+	j := t
+
+	if s < t {
+		tmp := data[s]
+		for {
+			if i == j {
+				break
+			}
+			for {
+				if data[j] < tmp || j <= i {
+					break
+				}
+				j--
+			}
+			data[i] = data[j]
+			for {
+				if data[i] > tmp || i >= j {
+					break
+				}
+				i++
+			}
+			data[j] = data[i]
+
+		}
+		data[i] = tmp
+		QuickSort(data, s, i-1)
+		QuickSort(data, i+1, t)
+	}
+}
+
+func SelectSort(data []int){
+	length := len(data)
+	for i:=0;i<length-1;i++{
+		m := i
+		for j:=i+1;j<length-1;j++{
+			if data[j] < data[m] {
+				m = j
+			}
+		}
+		if m != i {
+			tmp := data[i]
+			data[i] = data[m]
+			data[m] = tmp
+
+		}
+	}
+}
+
+func Sift(data []int,low, high int){
+	i := low
+	j := 2 * i
+	tmp := data[i]
+	for {
+		if j > high {
+			break
+		}
+		if data[j] > data[j + 1] {
+			j++
+		}
+		if tmp < data[j] {
+			data[i] = data[j]
+			i = j
+			j = 2*i
+		}else{
+			break
+		}
+	}
+	data[i] = tmp
+}
+
+func HeapSort(data []int){
+	//先构造一个大跟堆
+	length := len(data) - 1
+	for start:= len(data) / 2 -1 ; start>0;start--{
+		Sift(data,start,length)
+	}
+
+	for i:=length;i>1;i--{
+		tmp := data[i]
+		data[i] = data[1]
+		data[1] = tmp
+		Sift(data,1,i-1)
+	}
+
 }
 
 func DisplayArray(data []int) {
